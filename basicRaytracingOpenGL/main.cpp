@@ -13,7 +13,7 @@ void finish(){
 }
 
 void init(){
-    ventana = new Ventana(600,600);
+    ventana = new Ventana(600,400);
     // Inicializar GLFW
     ventana->initGLFW();
     // Inicializar GLEW

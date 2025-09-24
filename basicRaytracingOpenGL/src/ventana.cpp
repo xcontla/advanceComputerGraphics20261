@@ -23,7 +23,7 @@ void Ventana::initGLFW()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    window = glfwCreateWindow(width, height, "Cubo Rotando", nullptr, nullptr);
+    window = glfwCreateWindow(width, height, "Raytracing OpenGL", nullptr, nullptr);
     if (!window) {
         std::cerr << "Error al crear la ventana" << std::endl;
         glfwTerminate();

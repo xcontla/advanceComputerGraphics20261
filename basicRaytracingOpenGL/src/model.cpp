@@ -5,16 +5,16 @@
     {
 
         vertices[0] = -1.0f; vertices[1]  =-1.0f; vertices[2]  =  0.0f; // v0
-        vertices[3]  = 0.0f; vertices[4]  = 0.0f;  //t0
+        vertices[3]  = 0.0f; vertices[4]  = 1.0f;  //t0
 
         vertices[5] =  1.0f; vertices[6]  =-1.0f; vertices[7]  =  0.0f; //v1
-        vertices[8]  = 1.0f; vertices[9]  = 0.0f;  // t1
+        vertices[8]  = 1.0f; vertices[9]  = 1.0f;  // t1
         
         vertices[10] = 1.0f; vertices[11] = 1.0f; vertices[12] =  0.0f; //v2
-        vertices[13] = 1.0f; vertices[14] = 1.0f;  // t2
+        vertices[13] = 1.0f; vertices[14] = 0.0f;  // t2
         
         vertices[15] =-1.0f; vertices[16] = 1.0f; vertices[17] =  0.0f; //v3
-        vertices[18] = 0.0f; vertices[19] = 1.0f;  // t3
+        vertices[18] = 0.0f; vertices[19] = 0.0f;  // t3
 
         indices[0] = 0;indices[1] = 1;indices[2] = 2;
         indices[3] = 0;indices[4] = 2;indices[5] = 3; //cara
@@ -51,9 +51,9 @@
     }
 
     void Model::updateModel(float timeValue){
-        angle = 0.0; //timeValue * glm::radians(50.0f); // 50 grados por segundo
+        angle = 0.0; 
 
-        modelmat = glm::mat4(1.0);//glm::rotate(modelmat, angle, glm::vec3(0.5f, 1.0f, 0.0f)); // Rotar alrededor de (0.5, 1.0, 0.0)
+        modelmat = glm::mat4(1.0);
     }
 
     void Model::renderModel(glm::mat4 view, glm::mat4 projection){
